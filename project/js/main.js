@@ -66,6 +66,29 @@ function generarColores() {
     cuadrados[i].style.backgroundColor = colorHex;
     cuadrados[i].textContent = colorMuestra;
   }
+
+  mostrarToast("¡paleta generada con éxito!");
+}
+
+// Función para mostrar toast
+function mostrarToast(mensaje) {
+  const toast = document.createElement('div');
+  toast.className = 'toast';
+  toast.textContent = mensaje;
+  document.body.appendChild(toast);
+
+  // Mostrar el toast
+  setTimeout(() => {
+    toast.classList.add('show');
+  }, 100);
+
+  // Ocultar y eliminar después de 3 segundos
+  setTimeout(() => {
+    toast.classList.remove('show');
+    setTimeout(() => {
+      document.body.removeChild(toast);
+    }, 300);
+  }, 3000);
 }
 
 // Eventos
