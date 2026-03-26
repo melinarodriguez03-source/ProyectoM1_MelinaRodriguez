@@ -67,7 +67,7 @@ function generarColores() {
     cuadrados[i].textContent = colorMuestra;
   }
 
-  mostrarToast("¡paleta generada con éxito!");
+  mostrarToast("¡Paleta generada con éxito!");
 }
 
 // Función para mostrar toast
@@ -98,3 +98,15 @@ selectTamaño.addEventListener('change', cambiarTamaña);
 // Inicializar
 cambiarTamaña();
 generarColores();
+
+// Agregar event listeners para copiar colores
+cuadrados.forEach(cuadrado => {
+  cuadrado.addEventListener('click', () => {
+    const colorCode = cuadrado.textContent;
+    navigator.clipboard.writeText(colorCode).then(() => {
+      mostrarToast(`Color ${colorCode} copiado al portapapeles`);
+    }).catch(err => {
+      console.error('Error al copiar: ', err);
+    });
+  });
+});
