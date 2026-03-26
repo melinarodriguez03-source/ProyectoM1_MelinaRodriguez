@@ -99,3 +99,142 @@ select {
 .cuadrado.hidden {
   display: none;
 }
+
+/* Media Queries para dispositivos móviles y tablets */
+
+/* Tablets y dispositivos medianos (768px y menos) */
+@media (max-width: 768px) {
+  body {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  select {
+    padding: 0.4rem;
+    margin: 0.3rem;
+    font-size: 0.9rem;
+  }
+
+  #btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  #contenedor {
+    margin: 1rem auto;
+  }
+
+  #contenedor.grid-6 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 80px 80px 80px;
+  }
+
+  #contenedor.grid-8 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 80px 80px 80px 80px;
+  }
+
+  #contenedor.grid-9 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 80px 80px 80px 80px 80px;
+  }
+
+  .cuadrado {
+    width: 80px;
+    height: 80px;
+    font-size: 0.65rem;
+  }
+
+  .toast {
+    top: 10px;
+    right: 10px;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Teléfonos móviles (480px y menos) */
+@media (max-width: 480px) {
+  body {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  div {
+    margin: 0.5rem 0;
+  }
+
+  label {
+    display: block;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+  }
+
+  select {
+    padding: 0.3rem;
+    margin: 0.3rem 0;
+    font-size: 0.85rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    width: 100%;
+    margin-top: 0.8rem;
+  }
+
+  #contenedor {
+    margin: 1rem auto;
+    gap: 8px;
+  }
+
+  #contenedor.grid-6 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 70px 70px 70px;
+  }
+
+  #contenedor.grid-8 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 70px 70px 70px 70px;
+  }
+
+  #contenedor.grid-9 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 70px 70px 70px 70px 70px;
+  }
+
+  .cuadrado {
+    width: 70px;
+    height: 70px;
+    font-size: 0.6rem;
+  }
+
+  .toast {
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    text-align: center;
+  }
+}
